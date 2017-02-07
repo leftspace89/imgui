@@ -4679,7 +4679,11 @@ void ImGui::PushButtonRepeat(bool repeat)
     window->DC.ButtonRepeat = repeat;
     window->DC.ButtonRepeatStack.push_back(repeat);
 }
-
+void ImGui::PushButtonDisable(bool disable)
+{
+ ImGuiWindow* window = GetCurrentWindow();
+	window->DC.ButtonDisable = disable;
+}
 void ImGui::PopButtonRepeat()
 {
     ImGuiWindow* window = GetCurrentWindow();
