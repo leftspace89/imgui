@@ -558,6 +558,8 @@ struct IMGUI_API ImGuiDrawContext
     float                   TextWrapPos;            // == TextWrapPosStack.back() [empty == -1.0f]
     bool                    AllowKeyboardFocus;     // == AllowKeyboardFocusStack.back() [empty == true]
     bool                    ButtonRepeat;           // == ButtonRepeatStack.back() [empty == false]
+    bool		    ButtonDisable; // button enable disable click [disable click == true] [enable click  == false]
+
     ImVector<float>         ItemWidthStack;
     ImVector<float>         TextWrapPosStack;
     ImVector<bool>          AllowKeyboardFocusStack;
